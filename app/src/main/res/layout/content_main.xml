@@ -5,48 +5,57 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#FFF"
-        android:rowCount="10"
         android:columnCount="1"
         android:paddingBottom="@dimen/activity_vertical_margin"
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin"
+    android:rowCount="10"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         tools:context="com.kewishfagoe.android.droiddriven.MainActivity"
         tools:showIn="@layout/activity_main">
 
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/usernameField"
-        android:layout_row="0"
-        android:layout_column="0"
-        android:hint="Username"
-        android:gravity="center"
-        android:layout_marginTop="30dp"/>
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:ems="10"
-        android:id="@+id/passwordField"
-        android:layout_row="5"
-        android:layout_column="0"
-        android:hint="Password"
-        android:gravity="center"
-        android:layout_marginTop="30dp"/>
-
-    <Button
+    <ImageView
+        android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Login"
-        android:id="@+id/button"
-        android:layout_row="7"
+        android:layout_column="0"
+        android:layout_row="2"
+        android:src="@drawable/droid" />
+
+
+    <EditText
+        android:id="@+id/usernameField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_column="0"
+        android:layout_marginTop="30dp"
+        android:layout_row="3"
+        android:gravity="center"
+        android:hint="Username" />
+
+    <EditText
+        android:id="@+id/passwordField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_column="0"
+        android:layout_marginTop="30dp"
+        android:layout_row="5"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Password"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_column="0"
         android:layout_gravity="center"
         android:layout_marginTop="80dp"
+        android:layout_row="7"
         android:background="#88E0E0"
+        android:text="Login"
         />
 </GridLayout>
