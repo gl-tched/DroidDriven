@@ -2,13 +2,13 @@ package com.kewishfagoe.android.droiddriven;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -59,16 +59,17 @@ public class MainActivity extends AppCompatActivity {
         EditText password = (EditText) findViewById(R.id.passwordField);
         String passwordValue = String.valueOf(password.getText());
 
-        String notification = "Verkeerde Username of Password. Probeer het nogmaals.";
+        String notification = "Verkeerde Username of Password. \n Probeer het nogmaals.";
 
         if (usernameValue.equals("Kewish") && passwordValue.equals("Kewish")) {
-            onClick();
+            onClickLoadDashboard();
         } else {
-            Toast.makeText(this, notification, Toast.LENGTH_LONG).show();
+            Snackbar.make(view, notification, Snackbar.LENGTH_LONG).setAction("Action", null).show();
+            //Toast.makeText(this, notification, Toast.LENGTH_LONG).show();
         }
     }
 
-    public void onClick() {
+    public void onClickLoadDashboard() {
         Intent intent = new Intent(this, Dashboard.class);
         startActivity(intent);
     }
